@@ -1,0 +1,5 @@
+Number of lines:6
+Number of words:, 48
+Number of characters:, 270
+Average word length:, 6
+Most common word:, [('A', 1)]
