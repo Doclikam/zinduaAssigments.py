@@ -29,15 +29,15 @@ def file_content(file_name, file_mode):
         print(f"The number of characters is {number_of_characters}")
         print(f"The average word length is: {avg_words} ")
         print(f"The most common word is {mostcommon}")
-
+fi
     
         #creating a new file to write the results of the anlysis
         with open ("analysis.txt", "w") as analysis:
             analysis.write(f"Number of lines:{number_of_lines}\n")
-            analysis.write(f"Number of words:, {number_of_words}\n")
-            analysis.write(f"Number of characters:, {number_of_characters}\n")
-            analysis.write(f"Average word length:, {avg_words}\n")
-            analysis.write(f"Most common word:, {mostcommon}\n")
+            analysis.write(f"Number of words: {number_of_words}\n")
+            analysis.write(f"Number of characters: {number_of_characters}\n")
+            analysis.write(f"Average word length: {avg_words}\n")
+            analysis.write(f"Most common word: {mostcommon}\n")
 
 
 
