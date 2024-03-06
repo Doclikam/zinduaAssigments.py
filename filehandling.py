@@ -8,7 +8,7 @@ def file_content(file_name, file_mode):
         with open(file_name,file_mode) as file:
             number_of_lines=0
             number_of_words=0
-            number_of_characters=0
+            number_of_characters=0 
             #for each line in the file
             for line in file:
                 #increaments the line by one in the next iteration
