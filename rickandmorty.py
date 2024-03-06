@@ -35,9 +35,8 @@ def get_data(url):
 rickmorty=get_data(url)
 
 with open('rickandmorty.csv', 'w')as csv_writer:
-    csvwriter=csv.writer(csv_writer, delimeter='\t')
-    for line in csv_writer:
-        csv_writer.writerows(rickmorty)
+    csvwriter=csv.writer(csv_writer)
+    csv_writer.writerow(rickmorty)
         
     
     
