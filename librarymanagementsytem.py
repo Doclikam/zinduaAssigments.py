@@ -11,38 +11,39 @@ class book:
     def check_out(self):
         if not self.is_checked_out:
             print('book is checked out')
-            return true
+            return True
         else:
             print('book is not checked out')
     #return book is not checked out
     def return_book(self):
         if self.is_checked_out:
             print(f'you just returned{title}')
-            return false
+            return False
         else:
             print('you havent returned {title}')
             
             
-    def _str_(self,my_book):
-        return my_book(f"{title},{author},{isbn}")
+    def __str__(self):
+        return (f"title: {self.title}, author: {self.author}, isbn: {self.isbn}")
         
 #user input on the book
 my_book=book(title=input('enter title of the book: '),
-author=input('enter author of the book: '),
-isbn=input('enter number of the book:',
-is_checked_out=('enter "True" if book is checked out, and "False"is book is not checked out'))
-
-print(my_book)
+        author=input('enter author of the book: '),
+        isbn=input('enter number of the book:'),
+        is_checked_out=True)
 
 print(my_book.title)
 print(my_book.author)
 print(my_book.isbn)
 print(my_book.is_checked_out)
+print(my_book.check_out())
+print(my_book.return_book())
+print(my_book.__str__())
 
-
+"""
 #initializing a library with an empty list of books
 #keeping record of all the books in the library
-library class:
+class library:
     def __init__(self):
         self.list_books=[]
 
@@ -69,7 +70,7 @@ library class:
                 print(f'you have borrowed {title}. return it in 30 days')
                 return True
             else:
-            print('book already checked out')
+                print('book already checked out')
                 return false
 
 
@@ -94,20 +95,20 @@ library class:
 #initilaizing library
 library=library()
 
-creating a list of books
-book1=book("The women", "Kristin Hannah",380)
-book2=book("The House of Mirth" ,"Edith Wharton",678)
-book3=book("The Start", "Edith Wharton",78)
-book4=book("Absalom, Absalom!", "William Faulkner",90)
-book5=book("the village", "John Waithaka",567)
+#creating a list of books
+book1=library("The women", "Kristin Hannah",380)
+book2=library("The House of Mirth" ,"Edith Wharton",678)
+book3=library("The Start", "Edith Wharton",78)
+book4=library("Absalom, Absalom!", "William Faulkner",90)
+book5=library("the village", "John Waithaka",567)
 #adding books to library
-library.add_book
+
 library.add_book(book1)
 library.add_book(book2)
 library.add_book(book3)
 library.add_book(book4)
 library.add_book(book5)
-
+"""
 
 
 
