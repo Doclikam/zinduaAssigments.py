@@ -32,26 +32,21 @@ my_book=book(title=input('enter title of the book: '),
         isbn=input('enter number of the book:'),
         is_checked_out=True)
 
-print(my_book.title)
-print(my_book.author)
-print(my_book.isbn)
-print(my_book.is_checked_out)
+
 print(my_book.check_out())
 print(my_book.return_book())
 print(my_book.__str__())
 
-"""
 #initializing a library with an empty list of books
 #keeping record of all the books in the library
 class library:
     def __init__(self):
-        self.list_books=[]
+        self.list_book=[]
 
     #Adding a Book object to the library's book list.
     def add_book(self,book): 
         self.list_books.append(book)
         
-
 
     #Removes a book from the library by ISBN. If the book is not found, print an error message.
     def remove_book(self, isbn):
@@ -86,11 +81,12 @@ class library:
                 else:
                     print('book not in library')
 
-    #
-
     #Prints a list of all books in the library, including their status (checked out or not).
     def list_books(self):
         return self.list_books
+
+
+books=library()
 
 #initilaizing library
 library=library()
@@ -103,12 +99,18 @@ book4=library("Absalom, Absalom!", "William Faulkner",90)
 book5=library("the village", "John Waithaka",567)
 #adding books to library
 
-library.add_book(book1)
-library.add_book(book2)
-library.add_book(book3)
-library.add_book(book4)
-library.add_book(book5)
-"""
+books.add_book(book1)
+books.add_book(book2)
+books.add_book(book3)
+books.add_book(book4)
+books.add_book(book5)
+
+
+print(books.add_book())
+print(books.check_out_book())
+print(books.return_book())
+print(list_books())
+
 
 
 

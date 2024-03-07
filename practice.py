@@ -12,6 +12,10 @@ characters=(response['results'][0:19])
 for i in characters:
    print(i['name'])
 """
+print(my_book.title)
+print(my_book.author)
+print(my_book.isbn)
+print(my_book.is_checked_out)
 
 
 
