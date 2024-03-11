@@ -6,31 +6,18 @@ class book:
         self.isbn=isbn
         self.is_checked_out=False
 
-
     #method to define if book is checked out
     def check_out(self):
-        if not self.is_checked_out:
-            print('book is checked out')
-            return True
-        else:
-            print('book is not checked out')
-    #return book is not checked out
+        return True
+    
     def return_book(self):
-        if self.is_checked_out:
-            print(f'you just returned{title}')
-            return False
-        else:
-            print('you havent returned {title}')
-            
-            
+        return False
+        
     def __str__(self):
         return (f"title: {self.title}, author: {self.author}, isbn: {self.isbn}")
         
 #user input on the book
-my_book=book(title=input('enter title of the book: '),
-        author=input('enter author of the book: '),
-        isbn=input('enter number of the book:'),
-        is_checked_out=True)
+my_book=book("The women", "Kristin Hannah",380)
 
 
 print(my_book.check_out())
@@ -44,7 +31,7 @@ class library:
         self.list_book=[]
 
     #Adding a Book object to the library's book list.
-    def add_book(self,book): 
+    def add_book(self,book):
         self.list_books.append(book)
         
 
@@ -86,7 +73,7 @@ class library:
         return self.list_books
 
 
-books=library()
+mylibrary=library()
 
 #initilaizing library
 library=library()
@@ -99,11 +86,11 @@ book4=library("Absalom, Absalom!", "William Faulkner",90)
 book5=library("the village", "John Waithaka",567)
 #adding books to library
 
-books.add_book(book1)
-books.add_book(book2)
-books.add_book(book3)
-books.add_book(book4)
-books.add_book(book5)
+mylibrary.add_book(book1)
+mylibrary.add_book(book2)
+mylibrary.add_book(book3)
+mylibrary.add_book(book4)
+mylibrary.add_book(book5)
 
 
 print(books.add_book())
