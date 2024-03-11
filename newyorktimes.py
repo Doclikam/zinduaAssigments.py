@@ -13,7 +13,7 @@ soup=BeautifulSoup(response.content,"html.parser")
 articles=soup.find_all('div', class_="css-hep49k e1yccyp20")
 #print(articles)
 
-data=[]
+data={}
 
 
 
@@ -23,13 +23,13 @@ for article in articles[:10]:
     titles=article.find("p", class_="indicate-hover").text.strip()
     #print(titles)
     if article.find("p", class_="css-8h5y1w") == None:
-        pass
+        print("no description")
     else:
-        descriptions=article.find("p", class_="css-8h5y1w").text
+        descriptions=article.find("p", class_="css-8h5y1w").text.strip()
         print(descriptions)
 
     
-data.append({'titles': titles, 'descriptions': descriptions})
+data={'titles': titles, 'descriptions': descriptions}
 
 with open('nytimes.csv', 'w', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=['titles', 'descriptions'])
